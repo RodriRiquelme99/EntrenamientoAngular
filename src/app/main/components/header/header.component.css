@@ -1,0 +1,23 @@
+img {
+    height: 70px;
+}
+
+.nav-link {
+    font-weight: 600;
+}
+
+.navbar {
+    padding-left: 20px;
+}
+
+.collapse {
+    padding-left: 20px;
+}
+
+.d-flex {
+    margin-right: 20px;
+}
+
+.header {
+    margin-bottom: 90px;
+}
