@@ -35,13 +35,13 @@
 
     <main class="container" id="containerHeader">
 
-        <div class="primerdiv p-4 p-md-5 mb-4 text-white rounded bg-dark" >
+        <div class="primerdiv p-4 p-md-5 mb-4 text-white rounded bg-dark">
             <div class="segundodiv col-md-6 px-0 align-self-center">
                 <h1 class="display-4 fst-italic">Entrenamiento Angular</h1>
                 <p class="lead my-3">En esta sección encontraras toda la documentación
                     que necesitaras durante tu entrenamiento de Angular.</p>
             </div>
-            <div class="tercerdiv" >
+            <div class="tercerdiv">
                 <a href="#"><img class="logoAngular" src="../../../../assets/Angular_full_color_logo.svg.png"
                         alt="Logo Angular" id="articulo1"></a>
             </div>
@@ -51,36 +51,106 @@
         ================================ 
         ======  COMIENZO DE BLOG  ====== 
         ================================
- -->
+
+                <article class="blog-post" *ngFor="let dato of articulos">
+            <h3 class="titulo pb-4 mb-4 fst-italic border-bottom">
+                {{ dato.titulo }}
+            </h3>
+            <a href="{{dato.subarticulos.url}}" target="_blank">
+                <h3 class="blog-post-title">
+                    {{ dato.subarticulos.subtitulo }}
+                </h3>
+            </a>
+            <p>
+                {{ dato.subarticulos.informacion }}
+            </p>
+            <a href="{{dato.subarticulos2?.url}}" target="_blank">
+                <h3 class="blog-post-title">
+                    {{ dato.subarticulos2?.subtitulo }}
+                </h3>
+            </a>
+            <p>
+                {{ dato.subarticulos2?.informacion }}
+            </p>
+            <a href="{{dato.subarticulos3?.url}}" target="_blank">
+                <h3 class="blog-post-title">
+                    {{ dato.subarticulos3?.subtitulo }}
+                </h3>
+            </a>
+            <p>
+                {{ dato.subarticulos3?.informacion }}
+            </p>
+            <hr>
+        </article>
+        -->
+
+
+
 
         <div class="row g-5">
             <div class="col-md-8">
 
+<!-- 
+                <article class="blog-post" *ngFor="let dato of articulos">
+                    <h3 class="titulo pb-4 mb-4 fst-italic border-bottom">
+                        {{ dato.titulo }}
+                    </h3>
+                    <a href="{{dato.subarticulos.url}}" target="_blank">
+                        <h3 class="blog-post-title">
+                            {{ dato.subarticulos.subtitulo }}
+                        </h3>
+                    </a>
+                    <p>
+                        {{ dato.subarticulos.informacion }}
+                    </p>
+                    <a href="{{dato.subarticulos2?.url}}" target="_blank">
+                        <h3 class="blog-post-title">
+                            {{ dato.subarticulos2?.subtitulo }}
+                        </h3>
+                    </a>
+                    <p>
+                        {{ dato.subarticulos2?.informacion }}
+                    </p>
+                    <a href="{{dato.subarticulos3?.url}}" target="_blank">
+                        <h3 class="blog-post-title">
+                            {{ dato.subarticulos3?.subtitulo }}
+                        </h3>
+                    </a>
+                    <p>
+                        {{ dato.subarticulos3?.informacion }}
+                    </p>
+                    <hr>
+                </article>
+-->
                 <!-- ARTICULO 1 -->
-                <h3 class="titulo pb-4 mb-4 fst-italic border-bottom" >
+                <h3 class="titulo pb-4 mb-4 fst-italic border-bottom">
                     1. Front-End Basico
                 </h3>
                 <article class="blog-post">
                     <a href="https://marksheet.io/html-basics.html" target="_blank">
                         <h3 class="blog-post-title">1.1 Capítulos HTML </h3>
                     </a>
-                    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
-                    <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap.
-                        Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+
+                    <p>HTML es el código que se utiliza para estructurar y desplegar una página web y sus contenidos.
+                        Por ejemplo, sus contenidos podrían ser párrafos, una lista con viñetas, o imágenes y tablas de
+                        datos.</p>
                     <hr>
                     <a href="https://marksheet.io/why-css-exists.html" target="_blank">
                         <h3 class="blog-post-title">1.2 Capítulos CSS</h3>
                     </a>
-                    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
-                    <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap.
-                        Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+
+                    <p>CSS es un lenguaje que maneja el diseño y presentación de las páginas web, es decir,
+                        cómo lucen cuando un visitante las visita. Funciona junto al lenguaje HTML, que se encarga del
+                        contenido básico de las páginas.</p>
                     <hr>
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript" target="_blank">
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript"
+                        target="_blank">
                         <h3 class="blog-post-title">1.3 Capítulos JS</h3>
                     </a>
-                    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
-                    <p id="articulo2">This blog post shows a few different types of content that’s supported and styled with Bootstrap.
-                        Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+
+                    <p id="articulo2">JavaScript es el único lenguaje de programación que funciona en los navegadores de
+                        forma nativa. Por tanto se utiliza como
+                        complemento de HTML y CSS para crear páginas webs.</p>
                 </article>
                 <!-- Fin Articulo -->
 
@@ -93,16 +163,17 @@
                     <a href="https://nodejs.org/es/download/" target="_blank">
                         <h3 class="blog-post-title">2.1. Instalación NodeJS</h3>
                     </a>
-                    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
-                    <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap.
-                        Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+
+                    <p>NodeJs es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del
+                        servidor basado en el lenguaje de programación JavaScript.</p>
                     <hr>
                     <a href="https://angular.io/guide/setup-local" target="_blank">
                         <h3 class="blog-post-title">2.2. Instalación Angular CLI</h3>
                     </a>
-                    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
-                    <p id="articulo3">This blog post shows a few different types of content that’s supported and styled with Bootstrap.
-                        Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+
+                    <p id="articulo3">Angular es un framework para aplicaciones web desarrollado en TypeScript, de
+                        código abierto, mantenido por Google, que se utiliza para crear y mantener aplicaciones web de
+                        una sola página.</p>
                     <hr>
                 </article>
                 <!-- Fin Articulo -->
@@ -116,23 +187,28 @@
                     <a href="https://learngitbranching.js.org/?locale=es_AR" target="_blank">
                         <h3 class="blog-post-title">3.1. Tutorial Git Branching</h3>
                     </a>
-                    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
-                    <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap.
-                        Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+
+                    <p>El comando git branch te permite crear, enumerar y eliminar ramas, así como cambiar su nombre. No
+                        te permite cambiar entre ramas o volver a unir un historial bifurcado. Por este motivo, git
+                        branch está estrechamente integrado con los comandos git checkout y git merge.
+                    </p>
                     <hr>
                     <a href="#">
                         <h3 class="blog-post-title">3.2. Creación de repositorio GitLab</h3>
                     </a>
-                    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
-                    <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap.
-                        Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+
+                    <p>Gitlab es un servicio web de control de versiones y desarrollo de software colaborativo basado en
+                        Git. Además de gestor de repositorios, el servicio ofrece también alojamiento de wikis y un
+                        sistema de seguimiento de errores, todo ello publicado bajo una Licencia de código abierto.</p>
                     <hr>
                     <a href="https://www.toptal.com/gitflow/enhanced-git-flow-explained" target="_blank">
-                        <h3 class="blog-post-title">3.3. Don’t Fear the Repo: Enhanced git flow explained</h3>
+                        <h3 class="blog-post-title">3.3. Don’t Fear the Repo: Enhanced Git Flow explained</h3>
                     </a>
-                    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
-                    <p id="articulo4">This blog post shows a few different types of content that’s supported and styled with Bootstrap.
-                        Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+
+                    <p id="articulo4">El flujo de trabajo Gitflow es un flujo de trabajo de Git que favorece el
+                        desarrollo continuo de software y las prácticas de implementación de DevOps. El flujo de
+                        trabajo Gitflow define un modelo de creación de ramas estricto diseñado con la publicación del
+                        proyecto como fundamento.</p>
                 </article>
                 <!-- Fin Articulo -->
 
@@ -142,12 +218,15 @@
                     4. JavaScript structures
                 </h3>
                 <article class="blog-post">
-                    <a href="https://blog.bitsrc.io/data-structures-you-should-know-as-a-javascript-developer-9a35eb3b319c" target="_blank">
+                    <a href="https://blog.bitsrc.io/data-structures-you-should-know-as-a-javascript-developer-9a35eb3b319c"
+                        target="_blank">
                         <h3 class="blog-post-title">4.1.Data Structures You Should Know as a JavaScript Developer</h3>
                     </a>
-                    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
-                    <p id="articulo5">This blog post shows a few different types of content that’s supported and styled with Bootstrap.
-                        Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+
+                    <p id="articulo5">
+                        Comprender las estructuras de datos es útil en todos los aspectos de la programación, no es
+                        necesario tener un caso de uso particular en el que usará un Arból o un gráfico para tener que
+                        considerar aprender sobre ellos.</p>
 
                 </article>
                 <!-- Fin Articulo -->
@@ -158,26 +237,29 @@
                     5. Curso de Angular
                 </h3>
                 <article class="blog-post">
-                    <a href="https://app.pluralsight.com/course-player?clipId=2f6b6f57-945c-421e-8c53-6126fa04374e" target="_blank">
+                    <a href="https://app.pluralsight.com/course-player?clipId=2f6b6f57-945c-421e-8c53-6126fa04374e"
+                        target="_blank">
                         <h3 class="blog-post-title">5.1. Curso Pluralsight</h3>
                     </a>
-                    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
-                    <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap.
-                        Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+
+                    <p>En esta sección encontraras un curso de Angular en el cual aprenderas muchos conocimientos,
+                        tanto de Angular, typescript, html, css y demás.
+                    </p>
                     <hr>
                     <a href="https://angular.io/guide/styleguide#angular-coding-style-guide" target="_blank">
                         <h3 class="blog-post-title">5.2. Angular Coding Style Guide</h3>
                     </a>
-                    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
-                    <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap.
-                        Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+
+                    <p>Esta guía de codigos de estilo de Angular presenta las convenciones preferidas de angular.
+                        Componentes, bootstraping, directivas y lo que es más importante, explica por qué.</p>
                     <hr>
-                    <a href="https://cgonzalez-uy.medium.com/angular-como-construir-c%C3%B3digos-qr-eb2badcb3cde" target="_blank">
+                    <a href="https://cgonzalez-uy.medium.com/angular-como-construir-c%C3%B3digos-qr-eb2badcb3cde"
+                        target="_blank">
                         <h3 class="blog-post-title">5.3. Angular – Codigos QR</h3>
                     </a>
-                    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
-                    <p id="articulo6">This blog post shows a few different types of content that’s supported and styled with Bootstrap.
-                        Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+
+                    <p id="articulo6">Esta guía de creación de codigos QR en angular te enseñara a crearlos de una
+                        manera muy sencilla.</p>
                 </article>
                 <!-- Fin Articulo -->
 
@@ -187,20 +269,26 @@
                     6. OAuth 2.0
                 </h3>
                 <article class="blog-post">
-                    <a href="https://betterprogramming.pub/the-complete-guide-to-oauth-2-0-and-openid-connect-protocols-35ebc1cbc11a" target="_blank">
+                    <a href="https://betterprogramming.pub/the-complete-guide-to-oauth-2-0-and-openid-connect-protocols-35ebc1cbc11a"
+                        target="_blank">
                         <h3 class="blog-post-title">6.1. The Complete Guide to OAuth 2.0 and OpenID Connect Protocols
                         </h3>
                     </a>
-                    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
-                    <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap.
-                        Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+
+                    <p>Open Authorization es un estándar abierto que permite flujos simples de autorización para sitios
+                        web o aplicaciones informáticas. OpenID es un estándar de identificación digital
+                        descentralizado, con el que un usuario puede identificarse en una página web a través de una URL
+                        y puede ser verificado por cualquier servidor que soporte el protocolo.</p>
                     <hr>
                     <a href="https://darutk.medium.com/the-simplest-guide-to-oauth-2-0-8c71bd9a15bb" target="_blank">
                         <h3 class="blog-post-title">6.2. The Simplest Guide To OAuth 2.0</h3>
                     </a>
-                    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
-                    <p id="articulo7">This blog post shows a few different types of content that’s supported and styled with Bootstrap.
-                        Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+
+                    <p id="articulo7"> OAuth nos otorga una solución de administración de
+                        identidad y acceso, su finalidad es otorgar autorizaciones a los usuarios. Se trata de un
+                        protocolo
+                        para pasar la autorización de un servicio a otro sin compartir las credenciales de usuario
+                        reales, como un nombre de usuario y contraseña.</p>
 
                 </article>
                 <!-- Fin Articulo -->
@@ -214,9 +302,11 @@
                     <a href="https://www.udemy.com/course/bootstrap-4/learn/lecture/4244842#overview" target="_blank">
                         <h3 class="blog-post-title">7.1. Bootstrap 4</h3>
                     </a>
-                    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
-                    <p id="articulo8">This blog post shows a few different types of content that’s supported and styled with Bootstrap.
-                        Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+
+                    <p id="articulo8">Bootstrap es una biblioteca multiplataforma o conjunto de herramientas de código
+                        abierto para diseño de sitios y aplicaciones web. Contiene plantillas de diseño con tipografía,
+                        formularios, botones, cuadros, menús de navegación y otros elementos de diseño basado en HTML y
+                        CSS, así como extensiones de JavaScript adicionales.</p>
                 </article>
                 <!-- Fin Articulo -->
 
@@ -226,20 +316,19 @@
                     8. Jira
                 </h3>
                 <article class="blog-post">
-                    <a href="https://university.atlassian.com/student/catalog/list?category_ids=21734-free-training" target="_blank"> 
+                    <a href="https://university.atlassian.com/student/catalog/list?category_ids=21734-free-training"
+                        target="_blank">
                         <h3 class="blog-post-title">8.1. Registro y Overviews de Jira</h3>
                     </a>
-                    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
-                    <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap.
-                        Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+
+                    <p>Jira es una herramienta en línea para la administración de tareas de un proyecto, el seguimiento
+                        de errores e incidencias y para la gestión operativa de proyectos.</p>
                     <hr>
                     <a href="https://www.youtube.com/watch?v=-g2qY4MkYD0" target="_blank">
                         <h3 class="blog-post-title">8.2. Video Explicativo Jira</h3>
                     </a>
-                    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
-                    <p id="articulo9">This blog post shows a few different types of content that’s supported and styled
-                        with Bootstrap.
-                        Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+
+                    <p id="articulo9"></p>
                 </article>
                 <!-- Fin Articulo -->
 
@@ -252,17 +341,15 @@
                     <a href="https://angular.io/guide/schematics" target="_blank">
                         <h3 id="top" class="blog-post-title">9.1. Angular Schematics</h3>
                     </a>
-                    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
-                    <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap.
-                        Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+
+                    <p>Angular Schematics permite copiar jerarquías enteras de componentes y objetos (modíficándolas
+                        mediante opciones que podemos especificar mediante la propia llamada de comandos).</p>
                     <hr>
                     <a href="https://www.npmjs.com/package/@angular-devkit/schematics" target="_blank">
                         <h3 class="blog-post-title">9.2. Angular Schematics - Library</h3>
                     </a>
-                    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
-                    <p id="articulo10">This blog post shows a few different types of content that’s supported and styled
-                        with Bootstrap.
-                        Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+
+                    <p id="articulo10"></p>
                 </article>
                 <!-- Fin Articulo -->
 
@@ -272,49 +359,45 @@
                     10. Organizaciones Agiles
                 </h3>
                 <article class="blog-post">
-                    <a href="/resources/#articulo10">
+                    <a href="../../../../assets/organizaciones-agile.pdf" target="_blank">
                         <h3 class="blog-post-title">10.1 Organizaciones Agiles</h3>
                     </a>
-                    <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
 
-                    <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap.
-                        Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+                    <p>Las metodologías ágiles fueron creadas para hacer y gestionar nuevas formas de organizar
+                        procesos productivos. Agile no es un proceso común que implementan las empresas, sino que busca
+                        crear nuevas bases de creación de un nuevo modelo de negocio ayudando a la empresa con su
+                        rendimiento y productividad.</p>
                 </article>
                 <!-- Fin Articulo -->
 
             </div>
 
             <div class="col-md-4">
-                <div class="position-sticky" style="top: 2rem;">
-                    <div class="p-4 mb-3 bg-light rounded">
-                        <h4 class="fst-italic">About</h4>
-                        <p class="mb-0">Customize this section to tell your visitors a little bit about your
-                            publication, writers, content, or something else entirely. Totally up to you.</p>
-                    </div>
+                <div class="position-sticky" style="top: 8rem;">
 
                     <div class="p-4">
                         <h4 class="fst-italic">Indice</h4>
-                        <ol class="sidebar list-unstyled mb-0">
-                            <li><a href="/resources/#articulo1">Front-End Basico</a></li>
-                            <li><a href="/resources/#articulo2">Instalación de Angular</a></li>
-                            <li><a href="/resources/#articulo3">Versionamiento - Git</a></li>
-                            <li><a href="/resources/#articulo4">JavaScript structures</a></li>
-                            <li><a href="/resources/#articulo5">Curso de Angular</a></li>
-                            <li><a href="/resources/#articulo6">OAuth 2.0</a></li>
-                            <li><a href="/resources/#articulo7">Bootstrap</a></li>
-                            <li><a href="/resources/#articulo8">Jira</a></li>
-                            <li><a href="/resources/#articulo9">Angular Schematics</a></li>
-                            <li><a href="/resources/#articulo10">Organizaciones Agiles</a></li>
+                        <ol class="sidebar list-unstyled mb-0 ">
+                            <li><a class="p-0 text-muted" href="/recursos/#articulo1">Front-End Basico</a></li>
+                            <li><a class="p-0 text-muted" href="/recursos/#articulo2">Instalación de Angular</a></li>
+                            <li><a class="p-0 text-muted" href="/recursos/#articulo3">Versionamiento - Git</a></li>
+                            <li><a class="p-0 text-muted" href="/recursos/#articulo4">JavaScript structures</a></li>
+                            <li><a class="p-0 text-muted" href="/recursos/#articulo5">Curso de Angular</a></li>
+                            <li><a class="p-0 text-muted" href="/recursos/#articulo6">OAuth 2.0</a></li>
+                            <li><a class="p-0 text-muted" href="/recursos/#articulo7">Bootstrap</a></li>
+                            <li><a class="p-0 text-muted" href="/recursos/#articulo8">Jira</a></li>
+                            <li><a class="p-0 text-muted" href="/recursos/#articulo9">Angular Schematics</a></li>
+                            <li><a class="p-0 text-muted" href="/recursos/#articulo10">Organizaciones Agiles</a></li>
                         </ol>
-                    </div>
 
-                    <div class="p-4">
-                        <h4 class="fst-italic">Elsewhere</h4>
-                        <ol class="list-unstyled">
-                            <li><a href="#">GitHub</a></li>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Facebook</a></li>
+
+                        <h4 class="fst-italic">Titulos</h4>
+                        <ol class="sidebar list-unstyled mb-0 ">
+                            <li *ngFor="let dato of articulos; let i = index"><a href="/recursos/#articulo">{{
+                                    dato.titulo }}</a></li>
                         </ol>
+
+
                     </div>
                 </div>
             </div>

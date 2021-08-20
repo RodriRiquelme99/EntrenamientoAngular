@@ -5,11 +5,11 @@ import { RecursosComponent } from './main/pages/recursos/recursos.component';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: 'inicio',
     component: HomeComponent
   },
   {
-    path: 'resources',
+    path: 'recursos',
     component: RecursosComponent
   },
   {

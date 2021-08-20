@@ -17,3 +17,7 @@ img {
 .d-flex {
     margin-right: 20px;
 }
+
+.active {
+    color: royalblue;
+}
