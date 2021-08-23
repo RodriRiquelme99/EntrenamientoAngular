@@ -11,11 +11,6 @@
   padding-left: 15%;
 }
 
-hr {
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
-
 .titulo {
   font-size: 2rem;
   color: #e2504c;
@@ -101,7 +96,7 @@ h1, h2, h3, h4, h5, h6 {
  * Blog posts
  */
 .blog-post {
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
 }
 
 .blog-post a {

@@ -153,6 +153,22 @@ export class RecursosComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.articulos[0].subarticulos.informacion);
 
+        /*
+    for (let i in this.articulosTest2) {
+
+      let values = Object.values(this.articulosTest2[i]);
+      let titulo = values[0];
+      let subarticulos = values[1];
+
+
+      this.listaTitulos.push(titulo);
+      this.listaSubtitulos.push(subarticulos);
+      
+    }
+
+   */
+
+
   }
 
 
